@@ -68,7 +68,7 @@ const Hero = () => {
        animate={{ y: 20, opacity: 1 }}
        transition={{ duration: 0.8, delay: 0.6 }}
       src={assets.HeroCar} alt="car"
-      className='max-h-74  pb-8'
+      className=' pb-32 w-32 sm:pb-32 lg:pb-8 md:pb-8 sm:w-[12rem] md:w-[14rem] lg:w-[17rem]'
       />
     </motion.div>
   )
