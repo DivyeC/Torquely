@@ -11,25 +11,34 @@ const Login = () => {
     const [email, setEmail] = React.useState("");
     const [password, setPassword] = React.useState("");
 
-    const onSubmitHandler = async (event)=>{
-        try {
-            event.preventDefault();
-            const {data} = await axios.post(`/api/user/${state}`, {name, email, password})
+const onSubmitHandler = async (event) => {
+  event.preventDefault();
 
-            if (data.success) {
-                navigate('/')
-                setToken(data.token)
-                localStorage.setItem('token', data.token)
-                setShowLogin(false)
-            }else{
-                toast.error(data.message)
-            }
+  if (password.length < 8) {
+    toast.error("Password must be at least 8 characters long");
+    return;
+  }
 
-        } catch (error) {
-            toast.error(error.message)
-        }
-        
+  try {
+    const { data } = await axios.post(`/api/user/${state}`, {
+      name,
+      email,
+      password,
+    });
+
+    if (data.success) {
+      navigate("/");
+      setToken(data.token);
+      localStorage.setItem("token", data.token);
+      setShowLogin(false);
+    } else {
+      toast.error(data.message);
     }
+  } catch (error) {
+    toast.error(error.message);
+  }
+};
+
 
   return (
     <div onClick={()=> setShowLogin(false)} className='fixed top-0 bottom-0 left-0 right-0 z-100 flex items-center text-sm text-gray-600 bg-black/50'>

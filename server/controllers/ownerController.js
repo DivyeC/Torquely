@@ -12,8 +12,8 @@ export const changeRoleToOwner = async (req, res)=>{
         await User.findByIdAndUpdate(_id, {role: "owner"})
         res.json({success: true, message: "Now you can list cars"})
     } catch (error) {
-        console.log(error.message);
-        res.json({success: false, message: error.message})
+        console.log("Please login first");
+        res.json({success: false, message: "Please login first"});
     }
 }
 
