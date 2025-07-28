@@ -47,7 +47,7 @@ const AboutUs = () => {
         transition={{ duration: 0.8, delay: 0.8 }}
         className="max-w-2xl text-gray-500 text-base mt-4"
       >
-        With a wide range of premium cars and an easy-to-use booking platform, Torquely is your go-to destination for top-tier car rentals. Trusted by thousands, powered by passion, and driven by service.
+        With a wide range of premium cars and an easy-to-use booking platform, Torquely is your go-to destination for top-tier car rentals. Trusted by thousands, powered by passion, and driven by service. As of now we're spread across 5 cities in India.
       </motion.p>
     </motion.div>
   );

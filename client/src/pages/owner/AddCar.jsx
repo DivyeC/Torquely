@@ -103,7 +103,9 @@ const AddCar = () => {
             <label>Category</label>
             <select onChange={e=> setCar({...car, category: e.target.value})} value={car.category} className='px-3 py-2 mt-1 border border-borderColor rounded-md outline-none'>
               <option value="">Select a category</option>
+              <option value="Coupe">Coupe</option>              
               <option value="Sedan">Sedan</option>
+              <option value="Sports Car">Sports Car</option>              
               <option value="SUV">SUV</option>
               <option value="Van">Van</option>
             </select>
@@ -125,7 +127,6 @@ const AddCar = () => {
             <label>Fuel Type</label>
             <select onChange={e=> setCar({...car, fuel_type: e.target.value})} value={car.fuel_type} className='px-3 py-2 mt-1 border border-borderColor rounded-md outline-none'>
               <option value="">Select a fuel type</option>
-              <option value="Gas">Gas</option>
               <option value="Diesel">Diesel</option>
               <option value="Petrol">Petrol</option>
               <option value="Electric">Electric</option>
@@ -143,10 +144,7 @@ const AddCar = () => {
             <label>Location</label>
             <select onChange={e=> setCar({...car, location: e.target.value})} value={car.location} className='px-3 py-2 mt-1 border border-borderColor rounded-md outline-none'>
               <option value="">Select a location</option>
-              <option value="New York">New York</option>
-              <option value="Los Angeles">Los Angeles</option>
-              <option value="Houston">Houston</option>
-              <option value="Chicago">Chicago</option>
+              {cityList.map((city)=> <option key={city} value={city}>{city}</option>)}
             </select>
          </div>
         {/* Car Description */}

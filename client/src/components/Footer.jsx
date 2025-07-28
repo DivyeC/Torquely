@@ -61,7 +61,7 @@ const { isOwner, navigate, changeRole } = useAppContext();
                     <ul className='mt-3 flex flex-col gap-1.5'>
                         <li>
                         <button 
-                            onClick={() => {navigate('/wd');
+                            onClick={() => {navigate('/');
                                 setTimeout(() => {
                                     window.scrollTo({ top: 0, behavior: 'smooth' });
                                     }, 100);
