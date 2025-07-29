@@ -67,7 +67,7 @@ const Navbar = () => {
               else changeRole();
               setOpen(false);
             }}
-            className='cursor-pointer'
+            className='cursor-pointer text-blue-600'
           >
             {isOwner ? 'Dashboard' : 'List cars'}
           </button>
