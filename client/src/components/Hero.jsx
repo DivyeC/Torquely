@@ -34,21 +34,21 @@ const Hero = () => {
       transition={{ duration: 0.6, delay: 0.4 }}
       
 
-       onSubmit={handleSearch} className='z-10 flex flex-col md:flex-row items-start md:items-center justify-between p-6 rounded-lg md:rounded-full w-full max-w-80 md:max-w-200 bg-white shadow-[0px_8px_20px_rgba(0,0,0,0.1)]'>
+       onSubmit={handleSearch} className='z-10 flex flex-col md:flex-row lg:items-start md:items-start items-center sm:items-center md:items-center justify-between p-6 rounded-lg md:rounded-full w-full max-w-80 md:max-w-200 bg-white shadow-[0px_8px_20px_rgba(0,0,0,0.1)]'>
 
-        <div className='flex flex-col md:flex-row items-start md:items-center gap-10 min-md:ml-8'>
-            <div className='flex  flex-col items-start gap-2'>
+        <div className='flex flex-col md:flex-row lg:items-start md:items-start items-center sm:items-center md:items-center gap-10 min-md:ml-8'>
+            <div className='flex  flex-col lg:items-start md:items-start items-center sm:items-center gap-2'>
                 <select className='cursor-pointer' required value={pickupLocation} onChange={(e)=>setPickupLocation(e.target.value)}>
                     <option  value="">Pickup Location</option>
                     {cityList.map((city)=> <option key={city} value={city}>{city}</option>)}
                 </select>
                 <p className='px-1 text-sm text-gray-500'>{pickupLocation ? pickupLocation : 'Please select location'}</p>
             </div>
-            <div className='flex flex-col items-start gap-2'>
+            <div className='flex flex-col lg:items-start md:items-start items-center sm:items-center gap-2'>
                 <label htmlFor='pickup-date'>Pick-up Date</label>
                 <input value={pickupDate} onChange={e=>setPickupDate(e.target.value)} type="date" id="pickup-date" min={new Date().toISOString().split('T')[0]} className='text-sm cursor-pointer text-gray-500' required/>
             </div>
-            <div className='flex flex-col items-start gap-2'>
+            <div className='flex flex-col lg:items-start md:items-start items-center sm:items-center gap-2'>
                 <label htmlFor='return-date'>Return Date</label>
                 <input value={returnDate} onChange={e=>setReturnDate(e.target.value)} type="date" id="return-date" className='cursor-pointer  text-sm text-gray-500' required/>
             </div>
