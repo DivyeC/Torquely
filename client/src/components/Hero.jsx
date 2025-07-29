@@ -26,15 +26,15 @@ const Hero = () => {
         <motion.h1 initial={{ y: 50, opacity: 0 }}
             animate={{ y: -40, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-        className='text-4xl pt-40 md:text-5xl pb-10 font-semibold'>Luxury cars on Rent</motion.h1>
-      
+        className='text-4xl pt-50 lg:pt-30 md:pt-30 md:text-5xl lg:pb-10 md:pb-10 mt-10 font-semibold'>Luxury cars on Rent</motion.h1>
+
       <motion.form
       initial={{ scale: 0.95, opacity: 0, y: 50 }}
       animate={{ scale: 1, opacity: 1, y: -40 }}
       transition={{ duration: 0.6, delay: 0.4 }}
       
 
-       onSubmit={handleSearch} className='z-10 flex flex-col md:flex-row lg:items-start md:items-start items-center sm:items-center md:items-center justify-between p-6 rounded-lg md:rounded-full w-full max-w-80 md:max-w-200 bg-white shadow-[0px_8px_20px_rgba(0,0,0,0.1)]'>
+       onSubmit={handleSearch} className='z-10  mb-10 lg:mb-0 md:mb-0 flex flex-col md:flex-row lg:items-start md:items-start items-center sm:items-center md:items-center justify-between p-6 rounded-lg md:rounded-full w-full max-w-80 md:max-w-200 bg-white shadow-[0px_8px_20px_rgba(0,0,0,0.1)]'>
 
         <div className='flex flex-col md:flex-row lg:items-start md:items-start items-center sm:items-center md:items-center gap-10 min-md:ml-8'>
             <div className='flex  flex-col lg:items-start md:items-start items-center sm:items-center gap-2'>
